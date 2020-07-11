@@ -1,0 +1,405 @@
+
+/*general*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.clear {
+    clear: both;
+}
+/*commam*/
+
+.title{
+      padding-top: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.section-title{
+
+    margin:100px auto 20px auto;
+}
+ .line{
+    
+    text-align: center;
+    display: block;
+    width:5%;
+    height:2px;
+    padding-top: 5px;
+    border-bottom: 5px solid blue;
+    transform: translate(500px,0px);
+    line-height: 10px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/*header*/
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, .3)
+    
+}
+
+ 
+.header  .logo  {
+  float: left;
+  width: 40%;
+}
+.header  .nav {
+  float: left;
+  width: 60%;  
+}
+.header .nav > li {
+    display: inline-block;
+    border: none;
+    
+}
+.header  .nav > li > a{
+    display: block;
+    padding:26px 29px;
+    text-decoration: none; 
+    color: white;
+
+
+}
+.header  .nav > li > a.active:after ,.header  .nav > li > a:after {
+    content: " ";
+    display: block;
+    height: 3px; 
+    background-color: blue; 
+    transition: width .25s;
+ }
+.header  .nav  > li > a.active:after{
+    width: 100%;
+}
+.header  .nav > li > a:after{
+    width: 0px;
+}
+.header  .nav  > li > a:hover:after{
+   
+    width: 100%;
+} 
+.dropdown{
+    position: relative;
+}  
+.dropdown-menu{
+     
+    list-style-type: none;
+    position: absolute;
+    visibility: hidden;
+    background-color:white;
+    text-align: center;
+    padding: 5px;
+    width: 90px;
+    height:30px;
+    top: 60px;
+    left: -10px;
+   
+}
+.dropdown:hover .dropdown-menu{
+    visibility: visible;
+}
+ .dropdown-menu > a {
+     display: block;
+     text-decoration: none;
+
+ }
+/*  section styles*/
+
+ 
+
+.home{
+    height: 100vh;
+    background-image: url("../images/background/background1.webp");
+    background-size: cover;
+    position: relative;
+
+}
+ 
+
+.layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.home-content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.home .btn{
+ border: none;
+ width: 120px;  
+ height:  40px;
+ margin: 10px;
+ padding:5px;
+ border-radius: 10%;
+ font-size: 20px;
+
+ cursor: pointer;
+ transition: opacity 3s;
+
+}
+
+.btn:hover{
+    transition: opacity 3s;
+  opacity: .5;
+}
+.btn-start{
+    background-color: white;
+}
+.btn-learn{
+    background-color: blue;
+}
+/*about section */
+.about{
+    margin-top: 50px;
+
+}
+
+.about-sec{
+    margin: 1%;
+    padding-top: 60px;
+    width: 30%;
+    height: 250px;
+    text-align: center;
+     
+    display:inline-block;
+    position: relative;
+    line-height: normal;
+    border: 1px solid rgba(149, 132, 132, 0.05);
+}
+.about-sec a{
+    text-decoration: none;
+}
+.about-sec:after{
+    content: "";
+    display: block;
+    width: 0%;
+    top:0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    transition: width .5s;
+}
+.about-sec:hover  {
+    color:white;
+}
+.about-sec:hover:after{
+
+    
+    width: 100%;
+    z-index: -1;;
+}
+/* section Portfolio */
+.portfolio{
+
+    background-color: rgb(250, 249, 246) 
+}
+ 
+.images{
+    overflow: hidden;
+    margin: 0% auto;
+}
+
+.Portfolio-img{
+
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin-bottom: 40px;
+    position:relative;
+    padding: 1%;
+    
+
+}
+.Portfolio-img img {
+    
+    width: 100%;
+   
+} 
+ .mg {
+    margin: 0% 5%  ;
+}
+.layer2{
+    visibility: hidden;
+    position: absolute;;
+    top: 0;
+    left: 0;
+    right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .5);
+   text-align: center;
+   padding-top: 30%;
+   color: white;
+}
+
+.Portfolio-img:hover  .layer2{
+    visibility:visible;
+    
+}
+.icon {
+    display: inline-block;
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+/*services*/
+.items-content{
+    width: 29%;
+    border: 1px solid rgba(0, 0, 0, .5);
+    height: 190px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+  
+}
+.items-content .icon{
+    color: blue;
+}
+.items-content:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    transition: width .5s;
+}
+.items-content:hover{
+    color: blue;
+}
+.items-content:hover:after{
+    width: 100%;
+    z-index: -1;
+
+}
+
+.middle{
+    margin: 23px 6%;
+}
+.choose{
+    overflow: hidden;
+    margin: 40px 0px;
+}
+
+ .choose-item{
+     line-height: 35px;
+     width: 50%;
+     float: left;
+ }
+  
+.choose-title{
+    padding: 19px 19px 0px  19px;
+}
+.choose-line{
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 4px solid blue;
+    transform: translate(76px,0px);
+    width: 69px;
+    margin-top: 5px;
+}
+/*contacts*/
+.contacts-item
+{
+    overflow: hidden;
+}
+
+.contacts-line{
+    transform: translate(650px,0px)
+}
+.contacts-item{
+
+    border: 1px solid rgba(149, 132, 132, 0.05);
+     float: left;
+     width: 30%;
+     height: 250px;
+     padding: 40px 15px 15px 15px;
+     text-align: center;
+    margin-bottom: 100px;
+      
+}
+ .med{
+    margin:0 5%;
+}
+.contacts-item p{
+    color: rgba(0, 0, 0, .5);
+}
+.form-elemets{
+    border: none;
+    background-color:  rgba(161, 153, 145, 0.24);
+    width: 40px;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+form .text, form .email{
+    display: inline-block;
+    width: 40%;
+}
+.text{
+    margin-right:10px; 
+}
+form .subject , form .message{
+    display: block;
+    width: 100%;
+     
+}
+form .button{
+
+    width: 120px;
+    height: 40;
+    background-color:blue;
+    opacity: .8;
+    padding: 10px;
+    transform: translate(500px,10px)
+}
+form{
+    margin-bottom: 150px;
+}
+.footer{
+height: 250px;
+text-align: center;
+background-color: rgba(0, 0, 0, .8);
+
+}
+.footer img {
+    text-align: center;
+    padding-top: 30pxl;
+}
+.footer .link .ficon{
+    display: inline-block;
+    background-color: blue;
+    padding: 6px;
+    border-radius: 15px;
+    margin: 8px;
+    color: black;
+
+}
+
+.rights{
+    margin-top:20px;
+    color: rgba(0, 0, 0, .8) 
+}
